@@ -40,7 +40,7 @@ describe('XhrAdapter', function() {
   it('gets the responseObject', function(done) {
     var expectedResponseObject = {
       fixture: 'data'
-    }
+    };
 
     promise
     .invoke('responseObject')

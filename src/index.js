@@ -1,3 +1,5 @@
+'use strict';
+
 var XhrAdapter = require('./xhr-adapter');
 var NodeRequestAdapter = require('./node-request-adapter');
 
