@@ -32,4 +32,12 @@ XhrAdapter.prototype.responseHeader = function(header) {
   return this.response.xhr.getResponseHeader(header);
 };
 
+XhrAdapter.prototype.method = function() {
+  return this.response.req.method;
+}
+
+XhrAdapter.prototype.methodLowerCase = function() {
+  return this.response.req.method.toLowerCase();
+}
+
 module.exports = XhrAdapter;

@@ -43,3 +43,11 @@ Header values differ between the browser and Node.
 ## var rawReqResObject = ra.rawRequestResponse();
 
 Returns the raw request response object instance for direct use.
+
+## var method = ra.method();
+
+Returns the method, like `GET` or `PUT`
+
+## var methodLC = ra.methodLowerCase();
+
+Returns the method in lower case form, like `get` or `put`

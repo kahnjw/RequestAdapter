@@ -61,4 +61,11 @@ describe('XhrAdapter', function() {
     .should.eventually.equal('application/json')
     .notify(done);
   });
+
+  it('get a lower case method', function(done) {
+    promise
+    .invoke('methodLowerCase')
+    .should.eventually.equal('get')
+    .notify(done);
+  });
 });
