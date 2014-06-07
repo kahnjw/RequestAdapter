@@ -24,7 +24,7 @@ Returns the text of the response body.
 
 Returns the body as parsed JSON.
 
-## var allResponseHeaders = ra.allResponseHeaders();
+## var headers = ra.allResponseHeaders();
 
 Returns all the response headers.
 
@@ -39,6 +39,6 @@ Returns the specified response header.
 _Warning: This method only gives partial adapter support_
 Header values differ between the browser and Node.
 
-## var rawRequestResponse = ra.rawRequestResponse();
+## var rawReqResObject = ra.rawRequestResponse();
 
 Returns the raw request response object instance for direct use.
