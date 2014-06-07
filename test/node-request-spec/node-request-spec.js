@@ -79,4 +79,11 @@ describe('NodeRequestAdapter', function() {
     .should.eventually.equal('get')
     .notify(done);
   });
+
+  it('get a url', function(done) {
+    promise
+    .invoke('url')
+    .should.eventually.equal('/whatever')
+    .notify(done);
+  });
 });

@@ -41,4 +41,8 @@ NodeRequestAdapter.prototype.methodLowerCase = function() {
   return this.nodeRequest.req.method.toLowerCase();
 };
 
+NodeRequestAdapter.prototype.url = function() {
+  return this.nodeRequest.req.path;
+};
+
 module.exports = NodeRequestAdapter;

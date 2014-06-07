@@ -40,4 +40,8 @@ XhrAdapter.prototype.methodLowerCase = function() {
   return this.response.req.method.toLowerCase();
 }
 
+XhrAdapter.prototype.url = function() {
+  return this.response.req.url;
+}
+
 module.exports = XhrAdapter;

@@ -68,4 +68,11 @@ describe('XhrAdapter', function() {
     .should.eventually.equal('get')
     .notify(done);
   });
+
+  it('get the url', function(done) {
+    promise
+    .invoke('url')
+    .should.eventually.equal('/base/test/xhra-spec/fixture.json')
+    .notify(done);
+  });
 });
