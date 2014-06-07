@@ -1,6 +1,6 @@
 'use strict';
 
-var XhrAdapter = require('../../src/xhr-adapter.js');
+var XhrAdapter = require('../../src/xhr-adapter');
 var request = require('superagent');
 var qagent = require('qagent');
 var chai = require('chai');
