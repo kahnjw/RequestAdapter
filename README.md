@@ -37,6 +37,7 @@ _Warning: This method only gives partial adapter support_
 Returns the specified response header.
 
 _Warning: This method only gives partial adapter support_
+
 Header values differ between the browser and Node.
 
 ## var rawReqResObject = ra.rawRequestResponse();
