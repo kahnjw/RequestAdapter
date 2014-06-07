@@ -4,7 +4,7 @@ function NodeRequestAdapter(nodeRequest) {
   this.nodeRequest = nodeRequest;
 }
 
-NodeRequestAdapter.prototype.object = function() {
+NodeRequestAdapter.prototype.rawRequestResponse = function() {
   return this.nodeRequest;
 };
 
