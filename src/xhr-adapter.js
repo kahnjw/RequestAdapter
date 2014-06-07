@@ -4,7 +4,7 @@ function XhrAdapter(response) {
   this.response = response;
 }
 
-XhrAdapter.prototype.object = function() {
+XhrAdapter.prototype.rawRequestResponse = function() {
   return this.response;
 };
 

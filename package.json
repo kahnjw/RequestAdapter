@@ -1,6 +1,6 @@
 {
   "name": "requestadapter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A convenience wrapper for javascript request/response objects",
   "main": "src/index.js",
   "scripts": {
