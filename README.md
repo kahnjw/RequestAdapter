@@ -20,4 +20,4 @@ Returns the body as parsed JSON.
 
 ## var method = xhra.method();
 
-Returns the status as a string.
+Returns the method as a string.
