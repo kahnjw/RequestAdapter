@@ -1,25 +1,25 @@
 {
-  "name": "xhrAdapter",
-  "version": "0.0.0",
-  "description": "A convenience wrapper for javascript xhr objects",
-  "main": "index.js",
+  "name": "requestadapter",
+  "version": "0.0.1",
+  "description": "A convenience wrapper for javascript request/response objects",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp xhrspec; gulp nodespec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kahnjw/xhrAdapter.git"
+    "url": "git://github.com/kahnjw/RequestAdapter.git"
   },
   "author": "Jarrod Kahn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kahnjw/xhrAdapter/issues"
+    "url": "https://github.com/kahnjw/RequestAdapter/issues"
   },
-  "homepage": "https://github.com/kahnjw/xhrAdapter",
+  "homepage": "https://github.com/kahnjw/RequestAdapter",
   "devDependencies": {
     "mocha": "~1.20.1",
     "karma": "~0.12.16",
-    "browserify": "4.1.x",
+    "browserify": "~4.1.8",
     "karma-mocha": "~0.1.3",
     "karma-phantomjs-launcher": "~0.1.4",
     "karma-cli": "0.0.4",
@@ -29,6 +29,15 @@
     "qagent": "0.0.1",
     "chai-as-promised": "~4.1.1",
     "chai": "~1.9.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "shmock": "~0.7.0",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp-mocha": "~0.4.1",
+    "gulp-shell": "~0.2.5",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "~0.3.0",
+    "gulp": "~3.7.0",
+    "gulp-jshint": "~1.6.2",
+    "gulp-size": "~0.4.0"
   }
 }

@@ -9,7 +9,7 @@ module.exports = function(config) {
       '/**/*.browserify': 'browserify'
     },
     browserify: {
-      files: ['test/*-spec.js'],
+      files: ['test/xhra-spec/*-spec.js'],
       debug: true,
       watch: true
     },
