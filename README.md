@@ -16,14 +16,10 @@ Returns an ra instance.
 
 Returns the status code of the object.
 
-## var body = ra.body();
+## var text = ra.text();
 
-Returns the responseText of the xhr object.
+Returns the text of the response body.
 
-## var responseobject = ra.responseobject();
+## var responseObject = ra.responseObject();
 
 Returns the body as parsed JSON.
-
-## var method = ra.method();
-
-Returns the method as a string.
