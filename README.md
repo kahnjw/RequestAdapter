@@ -23,3 +23,22 @@ Returns the text of the response body.
 ## var responseObject = ra.responseObject();
 
 Returns the body as parsed JSON.
+
+## var allResponseHeaders = ra.allResponseHeaders();
+
+Returns all the response headers.
+
+_Warning: This method only gives partial adapter support_
+* In a Node environment the headers will be an object
+* In a browser environment the headers will be a concatenated string
+
+## var responseHeader = ra.responseHeader();
+
+Returns the specified response header.
+
+_Warning: This method only gives partial adapter support_
+Header values differ between the browser and Node.
+
+## var rawRequestResponse = ra.rawRequestResponse();
+
+Returns the raw request response object instance for direct use.
