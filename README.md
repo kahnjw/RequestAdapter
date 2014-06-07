@@ -1,23 +1,23 @@
-# xhrAdapter
+# RequestAdapter
 
 xhrAdapter exposes an interface for interacting with a Javascript XHR object.
 
-## var xhra = new XhrAdapter(xhr);
+## var ra = new RequestAdapter(requestResponse);
 
-Returns an xhra instance.
+Returns an ra instance.
 
-## var status = xhra.status();
+## var status = ra.status();
 
 Returns the status code of the object.
 
-## var body = xhra.body();
+## var body = ra.body();
 
 Returns the responseText of the xhr object.
 
-## var responseobject = xhra.responseobject();
+## var responseobject = ra.responseobject();
 
 Returns the body as parsed JSON.
 
-## var method = xhra.method();
+## var method = ra.method();
 
 Returns the method as a string.

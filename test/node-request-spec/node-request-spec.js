@@ -1,21 +1,27 @@
-var XhrAdapter = require('../index.js');
-var request = require('superagent');
-var qagent = require('qagent');
+'use strict';
+
+var NodeRequestAdapter = require('../../src/node-request-adapter');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
+var mock = require('./mock-server');
+var request = require('superagent');
+var qagent = require('qagent');
 
-require('./bind-polyfill');
+
 chai.should();
 chai.use(chaiAsPromised);
+require('../bind-polyfill');
 
-describe('XhrAdapter', function() {
+describe('NodeRequestAdapter', function() {
   var promise;
 
   beforeEach(function() {
-    var requestObject = request.get('/base/test/fixture.json');
+    mock.get('/whatever').reply(200, {fixture: 'data'});
+
+    var requestObject = request.get('http://localhost:9000/whatever');
     promise = qagent.end(requestObject)
       .then(function(response) {
-        return new XhrAdapter(response.xhr);
+        return new NodeRequestAdapter(response.res);
       });
   });
 
@@ -26,11 +32,11 @@ describe('XhrAdapter', function() {
     .notify(done);
   });
 
-  it('gets the body', function(done) {
-    var expectedBody = '{\n    "fixture": "data"\n}';
+  it('gets the text', function(done) {
+    var expectedBody = '{\n  \"fixture\": \"data\"\n}';
     promise
 
-    .invoke('body')
+    .invoke('text')
     .should.eventually.equal(expectedBody)
     .notify(done);
   });
@@ -49,14 +55,14 @@ describe('XhrAdapter', function() {
   it('gets responseHeaders', function(done) {
     promise
     .invoke('allResponseHeaders')
-    .should.eventually.be.a('string')
+    .should.eventually.be.a('object')
     .notify(done);
   });
 
   it('get a responseHeader', function(done) {
     promise
     .invoke('responseHeader', 'Content-Type')
-    .should.eventually.equal('application/json')
+    .should.eventually.equal('application/json; charset=utf-8')
     .notify(done);
   });
 });
