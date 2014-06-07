@@ -29,8 +29,8 @@ Returns the body as parsed JSON.
 Returns all the response headers.
 
 _Warning: This method only gives partial adapter support_
-* In a Node environment the headers will be an object
-* In a browser environment the headers will be a concatenated string
+    * In a Node environment the headers will be an object
+    * In a browser environment the headers will be a concatenated string
 
 ## var responseHeader = ra.responseHeader();
 
@@ -38,7 +38,7 @@ Returns the specified response header.
 
 _Warning: This method only gives partial adapter support_
 
-Header values differ between the browser and Node.
+    Header values differ between the browser and Node.
 
 ## var rawReqResObject = ra.rawRequestResponse();
 
