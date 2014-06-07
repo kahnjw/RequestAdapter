@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/kahnjw/RequestAdapter.png)](https://travis-ci.org/kahnjw/RequestAdapter)
 
+```
+npm install requestadapter
+```
+
 RequestAdapter exposes an interface for interacting with javascript request response objects on Node and in the browser in a simple, unified way.
 
 ## var ra = new RequestAdapter(requestResponse);

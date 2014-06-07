@@ -1,21 +1,21 @@
 {
-  "name": "xhrAdapter",
+  "name": "requestadapter",
   "version": "0.0.1",
-  "description": "A convenience wrapper for javascript xhr objects",
+  "description": "A convenience wrapper for javascript request/response objects",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp xhrspec; gulp nodespec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kahnjw/xhrAdapter.git"
+    "url": "git://github.com/kahnjw/RequestAdapter.git"
   },
   "author": "Jarrod Kahn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kahnjw/xhrAdapter/issues"
+    "url": "https://github.com/kahnjw/RequestAdapter/issues"
   },
-  "homepage": "https://github.com/kahnjw/xhrAdapter",
+  "homepage": "https://github.com/kahnjw/RequestAdapter",
   "devDependencies": {
     "mocha": "~1.20.1",
     "karma": "~0.12.16",
