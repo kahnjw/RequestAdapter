@@ -65,4 +65,25 @@ describe('NodeRequestAdapter', function() {
     .should.eventually.equal('application/json; charset=utf-8')
     .notify(done);
   });
+
+  it('get a method', function(done) {
+    promise
+    .invoke('method')
+    .should.eventually.equal('GET')
+    .notify(done);
+  });
+
+  it('get a lower case method', function(done) {
+    promise
+    .invoke('methodLowerCase')
+    .should.eventually.equal('get')
+    .notify(done);
+  });
+
+  it('get a url', function(done) {
+    promise
+    .invoke('url')
+    .should.eventually.equal('/whatever')
+    .notify(done);
+  });
 });

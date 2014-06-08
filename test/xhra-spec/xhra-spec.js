@@ -61,4 +61,25 @@ describe('XhrAdapter', function() {
     .should.eventually.equal('application/json')
     .notify(done);
   });
+
+  it('get a method', function(done) {
+    promise
+    .invoke('method')
+    .should.eventually.equal('GET')
+    .notify(done);
+  });
+
+  it('get a lower case method', function(done) {
+    promise
+    .invoke('methodLowerCase')
+    .should.eventually.equal('get')
+    .notify(done);
+  });
+
+  it('get the url', function(done) {
+    promise
+    .invoke('url')
+    .should.eventually.equal('/base/test/xhra-spec/fixture.json')
+    .notify(done);
+  });
 });
