@@ -6,7 +6,7 @@
 npm install requestadapter
 ```
 
-RequestAdapter exposes an interface for interacting with javascript request response objects on Node and in the browser in a simple, unified way.
+RequestAdapter exposes an interface for interacting with javascript request response objects on Node and in the browser in a simple, unified way. It is best used in combination with [superagent](https://github.com/visionmedia/superagent).
 
 ## var ra = new RequestAdapter(requestResponse);
 
