@@ -51,3 +51,7 @@ Returns the method, like `GET` or `PUT`
 ## var methodLC = ra.methodLowerCase();
 
 Returns the method in lower case form, like `get` or `put`
+
+## var url = ra.url();
+
+Returns the URL of the request
